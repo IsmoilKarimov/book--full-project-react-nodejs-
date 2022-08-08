@@ -1,0 +1,102 @@
+@import '../../assets/css/mixin.scss';
+
+
+.grid {
+    &.col-3,
+    &.col-md-4,
+    &.col-sm-6 {
+        padding: 0px;
+        .gpro {
+            &__box {
+                padding: 20px;
+                border-radius: 14px;
+                border: 1px solid #f0f0f0;
+                text-align: center;
+                &:hover {
+                    .gpro {
+                        &__hide{
+                            height: auto;
+                        }
+                        &__show {
+                            height: 0;
+                        }
+                    }
+                }
+            }
+            &__img {
+                @include bg;
+                height: 321px;
+                position: relative;
+                border-radius: 20px;
+            }
+            &__fav {
+                width: 50px;
+                height: 50px;
+                border-radius: 14px;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #fff;
+                color: $violet;
+                transition: .3s;
+                &:hover {
+                    background-color: $violet;
+                    path {
+                        fill: #fff;
+                    }
+                }
+            }
+            &__title {
+                padding: 17px 0px 6px;
+                display: block;
+                font-size: 20px;
+                font-weight: 700;
+                width: 100%;
+            }
+            &__genre {
+                font-size: 14px;
+                margin-bottom: 13px;
+                color: $violet;
+            }
+            &__review {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img {
+                    margin: 0px 4px;
+                }
+            }
+            &__old {
+                font-size: 18px;
+                color: #aaa;
+                text-decoration: line-through;
+            }
+            &__new {
+                font-size: 24px;
+                font-weight: 700;
+                color: $violet;
+                margin-bottom: 5px;
+            }
+            &__cart {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                img {
+                    margin-right: 17px;
+                }
+            }
+            &__hide {
+                overflow: hidden;
+                height: 0;
+                transition: .4s;
+            }
+            &__show{
+                overflow: hidden;
+                transition: .4s;
+            }
+        }
+    }
+}
